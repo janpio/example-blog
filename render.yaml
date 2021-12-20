@@ -5,7 +5,7 @@
 #####
 
 services:
-- name: learn-web
+- name: example-blog-web
   type: web
   env: static
   buildCommand: yarn rw deploy render web
@@ -26,7 +26,7 @@ services:
     source: /*
     destination: /index.html
 
-- name: learn-api
+- name: example-blog-api
   type: web
   env: node
   region: oregon
