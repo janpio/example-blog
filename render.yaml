@@ -16,12 +16,7 @@ services:
   routes:
   - type: rewrite
     source: /.redwood/functions/*
-#####
-# NOTE: replace destination api url after first deploy to Render
-# example:
-#   destination: https://myredwoodproject-api.onrender.com/*
-#####
-    destination: replace_with_api_url/*
+    destination: https://example-blog-api-dnd9.onrender.com/*
   - type: rewrite
     source: /*
     destination: /index.html
@@ -36,7 +31,7 @@ services:
   - key: NODE_VERSION
     value: 14
   - key: DATABASE_URL
-    value: file:./data/sqlite.db
+    value: postgresql://augustina:uJjWdXhvx7@pg-db-provision.cm0mkpwj8arx.eu-central-1.rds.amazonaws.com:5432/purple_elephant
   disk:
     name: sqlite-data
     mountPath: /opt/render/project/src/api/db/data
